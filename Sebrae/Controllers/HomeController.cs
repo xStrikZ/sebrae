@@ -13,6 +13,11 @@ namespace Sebrae.Controllers
             return View();
         }
 
+        public ActionResult LoginPage()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
