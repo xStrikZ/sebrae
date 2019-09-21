@@ -13,20 +13,23 @@ export class FixedPluginComponent implements OnInit{
 
   public state: boolean = true;
 
-  // changeSidebarColor(color){
-  //   var sidebar = <HTMLElement>document.querySelector('.sidebar');
+  changeSidebarColor(color){
+    var sidebar = <HTMLElement>document.querySelector('.sidebar');
 
-  //   this.sidebarColor = color;
-  //   if(sidebar != undefined){
-  //       sidebar.setAttribute('data-color',color);
-  //   }
-  // }
-  // changeSidebarActiveColor(color){
-  //   var sidebar = <HTMLElement>document.querySelector('.sidebar');
-  //   this.sidebarActiveColor = 'color';
-  //   if(sidebar != undefined){
-  //       sidebar.setAttribute('data-active-color',color);
-  //   }
-  // }
-  // ngOnInit(){}
+    this.sidebarColor = color;
+    if(sidebar != undefined){
+        sidebar.setAttribute('data-color',color);
+    }
+  }
+  changeSidebarActiveColor(color){
+    var sidebar = <HTMLElement>document.querySelector('.sidebar');
+    this.sidebarActiveColor = color;
+    if(sidebar != undefined){
+        sidebar.setAttribute('data-active-color',color);
+    }
+  }
+  ngOnInit(){
+    var sidebar = <HTMLElement>document.querySelector('.sidebar');
+    sidebar.setAttribute('data-active-color','info');
+  }
 }
