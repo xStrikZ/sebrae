@@ -12,9 +12,9 @@ export const ROUTES: RouteInfo[] = [
     { path: '/dashboard',     title: 'Home',              icon:'nc-bank',       class: '' },
     { path: '/rewards',       title: 'Pontos',            icon:'nc-diamond',    class: '' },
     { path: '/situation',     title: 'Situação',          icon:'nc-chat-33',    class: '' },
-    { path: '/maps',          title: 'Localização',       icon:'nc-map-big',      class: '' },
-    // { path: '/user',          title: 'User Profile',      icon:'nc-single-02',  class: '' },
-     { path: '/table',         title: 'Empresas',        icon:'nc-shop',    class: '' },
+    { path: '/maps',          title: 'Localização',       icon:'nc-map-big',    class: '' },
+    { path: '/user',          title: 'Home',              icon:'nc-bank',       class: '' },
+    { path: '/table',         title: 'Empresas',          icon:'nc-shop',       class: '' },
     // { path: '/typography',    title: 'Typography',        icon:'nc-caps-small', class: '' },
     // { path: '/upgrade',       title: 'Upgrade to PRO',    icon:'nc-spaceship',  class: 'active-pro' },
 ];
