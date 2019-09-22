@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Situacao";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-user">
+            <div class="card-header">
+                <h5 class="card-title">Atualizar Situação</h5>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Situação Atual</label>
+                                <input type="text" class="form-control" disabled="" placeholder="Situação Atual" value="Dívidas">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Nova Situação</label>
+                                <select class="form-control form-control-lg" placeholder="Selecione uma opção">
+                                    <option disabled="">- - -   Selecione uma opção   - - -</option>
+                                    <option>Baixo Faturamento</option>
+                                    <option>Dívidas</option>
+                                    <option>Poucos clientes</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Sobre</label>
+                                <textarea class="form-control textarea" placeholder="Por favor, nos dê mais detalhes da sua situação"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="update ml-auto mr-auto">
+                            <button type="submit" class="btn btn-primary btn-round">Atualizar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

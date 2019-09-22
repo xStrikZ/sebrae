@@ -1,61 +1,199 @@
 ﻿@model IEnumerable<Sebrae.Models.PessoaJuridica>
 @{
     ViewBag.Title = "Home Page";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
 }
 
-<h2>Gerenciamento de Prestadores</h2>
-
-<p>
-    @Html.ActionLink("Cadastrar", "Cadastrar", "Prestador", new { @class = "btn btn-outline-success" })
-</p>
-<table class="table table-sm table-hover table-striped table-bordered">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CPF_CNPJ)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DS_RAZAO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DS_CEP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DS_CIDADE)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DS_ESTADO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SG_UF)
-        </th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CPF_CNPJ)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DS_RAZAO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DT_FUNDACAO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SG_UF)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DS_ESTADO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SG_UF)
-            </td>
-        </tr>
-    }
-
-</table> 
+<div class="row">
+    <div class="col-md-3">
+        <div class="card card-stats">
+            <div class="card-body ">
+                <div class="row">
+                    <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                            <i class="nc-icon nc-diamond text-warning"></i>
+                        </div>
+                    </div>
+                    <div class="col-7 col-md-8">
+                        <a href='../Home/Pontos'>
+                            <div class="numbers">
+                                <p class="card-category">Pontos</p>
+                                <p class="card-title">200
+                                <p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                    <a href="#"><i class="fa fa-refresh"></i> Atualizar</a>
+                </div>
+            </div>
+        </div>
+        <div class="card card-stats">
+            <div class="card-body ">
+                <div class="row">
+                    <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                            <i class="nc-icon nc-compass-05 text-success"></i>
+                        </div>
+                    </div>
+                    <div class="col-7 col-md-8">
+                        <div class="numbers">
+                            <p class="card-category">Consultorias</p>
+                            <p class="card-title">2
+                            <p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                    <a href="#"><i class="fa fa-refresh"></i> Atualizar</a>
+                </div>
+            </div>
+        </div>
+        <div class="card card-stats">
+            <div class="card-body ">
+                <div class="row">
+                    <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                            <i class="nc-icon nc-pin-3 text-danger"></i>
+                        </div>
+                    </div>
+                    <div class="col-7 col-md-8">
+                        <div class="numbers">
+                            <a href='/#/maps'><p class="card-category">Atualizar localização</p></a>
+                            <p class="card-title">
+                            <p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                    <i class="fa fa-clock-o"></i> Ultima atualização em
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="card card-user">
+            <div class="card-header">
+                <h5 class="card-title">Editar Perfil</h5>
+            </div>
+            <div class="card-body">
+                <form>
+                    @foreach (var item in Model)
+                    {
+                        <div class="row">
+                            <div class="col-md-5 pr-1">
+                                <div class="form-group">
+                                    <label>Empresa</label>
+                                    <input type="text" class="form-control" disabled="" placeholder="Company" value="@item.NM_FANTASIA">
+                                </div>
+                            </div>
+                            <div class="col-md-3 px-1">
+                                <div class="form-group">
+                                    <label>CNPJ</label>
+                                    <input type="text" class="form-control" disabled="" placeholder="Username" value="@item.CPF_CNPJ">
+                                </div>
+                            </div>
+                            <div class="col-md-4 pl-1">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Endereço de Email</label>
+                                    <input type="email" class="form-control" placeholder="Email" value="@item.DS_MAPA">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <div class="form-group">
+                                    <label>Porte</label>
+                                    <input type="text" class="form-control" disabled="disabled" placeholder="Porte" value="@item.DS_PORTE">
+                                </div>
+                            </div>
+                            <div class="col-md-6 pl-1">
+                                <div class="form-group">
+                                    <label>Telefone</label>
+                                    <input type="text" class="form-control" placeholder="Telefone" value="@item.DS_EMAIL">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <div class="form-group">
+                                    <label>Celular</label>
+                                    <input type="text" class="form-control" placeholder="Porte" value="@item.DS_TELEFONE">
+                                </div>
+                            </div>
+                            <div class="col-md-6 pl-1">
+                                <div class="form-group">
+                                    <label>Comercial</label>
+                                    <input type="text" class="form-control" placeholder="Telefone" value="@item.DS_CELULAR">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 pr-1">
+                                <div class="form-group">
+                                    <label>CEP</label>
+                                    <input type="text" class="form-control" placeholder="CEP" value="@item.DT_FUNDACAO">
+                                </div>
+                            </div>
+                            <div class="col-md-4 px-1">
+                                <div class="form-group">
+                                    <label>Cidade</label>
+                                    <input type="text" class="form-control" placeholder="cidade" value="@item.SG_UF">
+                                </div>
+                            </div>
+                            <div class="col-md-4 pl-1">
+                                <div class="form-group">
+                                    <label>Estado</label>
+                                    <input type="text" class="form-control" placeholder="bairro" value="@item.DS_CEP">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 pr-1">
+                                <div class="form-group">
+                                    <label>Bairro</label>
+                                    <input type="text" class="form-control" placeholder="CEP" value="@item.DS_CIDADE">
+                                </div>
+                            </div>
+                            <div class="col-md-4 px-1">
+                                <div class="form-group">
+                                    <label>Endereço</label>
+                                    <input type="text" class="form-control" placeholder="cidade" value="@item.DS_ESTADO">
+                                </div>
+                            </div>
+                            <div class="col-md-4 pl-1">
+                                <div class="form-group">
+                                    <label>Número</label>
+                                    <input type="text" class="form-control" placeholder="bairro" value="@item.DS_RUA">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Sobre</label>
+                                    <textarea class="form-control textarea">Deseja adicionar mais alguma informação?</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="update ml-auto mr-auto">
+                                <button type="submit" class="btn btn-primary btn-round">Atualizar Perfil</button>
+                            </div>
+                        </div>
+                    }
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

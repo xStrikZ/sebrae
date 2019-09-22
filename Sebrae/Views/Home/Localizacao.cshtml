@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Localizacao";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card ">
+            <div class="card-header text-center ">
+                <button class="btn btn-primary btn-round">Atualizar localização</button>
+            </div>
+            <div class="card-body ">
+                <div id="map" class="map"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/core/jquery.min.js"></script>
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2vqB32Rzc1JpoG2FRvJTNtJSP60Mj2OY"></script>
+
+<script>
+    $(document).ready(function () {
+        demo.initGoogleMaps();
+    });
+</script>

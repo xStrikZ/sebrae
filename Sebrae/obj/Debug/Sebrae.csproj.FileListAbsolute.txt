@@ -101,5 +101,5 @@ C:\Users\Gustavo\source\repos\sebrae\Sebrae\bin\System.Runtime.CompilerServices.
 C:\Users\Gustavo\source\repos\sebrae\Sebrae\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\Gustavo\source\repos\sebrae\Sebrae\bin\System.ValueTuple.xml
 C:\Users\Gustavo\source\repos\sebrae\Sebrae\obj\Debug\Sebrae.csprojAssemblyReference.cache
-C:\Users\Gustavo\source\repos\sebrae\Sebrae\obj\Debug\Sebrae.Migrations.Update2.resources
+C:\Users\Gustavo\source\repos\sebrae\Sebrae\obj\Debug\Sebrae.Migrations.CreateDatabase.resources
 C:\Users\Gustavo\source\repos\sebrae\Sebrae\obj\Debug\Sebrae.csproj.GenerateResource.cache

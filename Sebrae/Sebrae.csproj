@@ -166,15 +166,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomeSController.cs" />
     <Compile Include="Controllers\_BaseController.cs" />
     <Compile Include="DAL\PessoaJuridicaDAO.cs" />
     <Compile Include="DAL\SingletonContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909212059099_Update2.cs" />
-    <Compile Include="Migrations\201909212059099_Update2.Designer.cs">
-      <DependentUpon>201909212059099_Update2.cs</DependentUpon>
+    <Compile Include="Migrations\201909221435452_CreateDatabase.cs" />
+    <Compile Include="Migrations\201909221435452_CreateDatabase.Designer.cs">
+      <DependentUpon>201909221435452_CreateDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseModel.cs" />
@@ -186,17 +187,109 @@
     <Compile Include="Utils\Sessao.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\paper-dashboard.css" />
+    <Content Include="assets\css\paper-dashboard.min.css" />
+    <Content Include="assets\demo\demo.css" />
+    <Content Include="assets\demo\demo.js" />
+    <Content Include="assets\img\apple-icon.png" />
+    <Content Include="assets\img\bg5.jpg" />
+    <Content Include="assets\img\damir-bosnjak.jpg" />
+    <Content Include="assets\img\default-avatar.png" />
+    <Content Include="assets\img\faces\ayo-ogunseinde-1.jpg" />
+    <Content Include="assets\img\faces\ayo-ogunseinde-2.jpg" />
+    <Content Include="assets\img\faces\clem-onojeghuo-1.jpg" />
+    <Content Include="assets\img\faces\clem-onojeghuo-2.jpg" />
+    <Content Include="assets\img\faces\clem-onojeghuo-3.jpg" />
+    <Content Include="assets\img\faces\clem-onojeghuo-4.jpg" />
+    <Content Include="assets\img\faces\erik-lucatero-1.jpg" />
+    <Content Include="assets\img\faces\erik-lucatero-2.jpg" />
+    <Content Include="assets\img\faces\joe-gardner-1.jpg" />
+    <Content Include="assets\img\faces\joe-gardner-2.jpg" />
+    <Content Include="assets\img\faces\kaci-baum-1.jpg" />
+    <Content Include="assets\img\faces\kaci-baum-2.jpg" />
+    <Content Include="assets\img\favicon.png" />
+    <Content Include="assets\img\header.jpg" />
+    <Content Include="assets\img\jan-sendereks.jpg" />
+    <Content Include="assets\img\logo-small.png" />
+    <Content Include="assets\img\mike.jpg" />
+    <Content Include="assets\js\core\bootstrap.min.js" />
+    <Content Include="assets\js\core\jquery.min.js" />
+    <Content Include="assets\js\core\popper.min.js" />
+    <Content Include="assets\js\paper-dashboard.js" />
+    <Content Include="assets\js\paper-dashboard.min.js" />
+    <Content Include="assets\js\plugins\bootstrap-notify.js" />
+    <Content Include="assets\js\plugins\chartjs.min.js" />
+    <Content Include="assets\js\plugins\perfect-scrollbar.jquery.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="docs\documentation.html" />
+    <Content Include="examples\dashboard.html" />
+    <Content Include="examples\icons.html" />
+    <Content Include="examples\map.html" />
+    <Content Include="examples\notifications.html" />
+    <Content Include="examples\tables.html" />
+    <Content Include="examples\typography.html" />
+    <Content Include="examples\upgrade.html" />
+    <Content Include="examples\user.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="gulpfile.js" />
+    <Content Include="images\sirius.png" />
+    <Content Include="nucleo-icons.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="assets\css\bootstrap.min.css.map" />
+    <Content Include="assets\css\paper-dashboard.css.map" />
+    <Content Include="assets\fonts\nucleo-icons.eot" />
+    <Content Include="assets\fonts\nucleo-icons.ttf" />
+    <Content Include="assets\fonts\nucleo-icons.woff" />
+    <Content Include="assets\fonts\nucleo-icons.woff2" />
+    <Content Include="assets\js\paper-dashboard.js.map" />
+    <Content Include="assets\scss\paper-dashboard.scss" />
+    <Content Include="assets\scss\paper-dashboard\cards\_card-chart.scss" />
+    <Content Include="assets\scss\paper-dashboard\cards\_card-map.scss" />
+    <Content Include="assets\scss\paper-dashboard\cards\_card-plain.scss" />
+    <Content Include="assets\scss\paper-dashboard\cards\_card-stats.scss" />
+    <Content Include="assets\scss\paper-dashboard\cards\_card-user.scss" />
+    <Content Include="assets\scss\paper-dashboard\mixins\_buttons.scss" />
+    <Content Include="assets\scss\paper-dashboard\mixins\_cards.scss" />
+    <Content Include="assets\scss\paper-dashboard\mixins\_dropdown.scss" />
+    <Content Include="assets\scss\paper-dashboard\mixins\_inputs.scss" />
+    <Content Include="assets\scss\paper-dashboard\mixins\_page-header.scss" />
+    <Content Include="assets\scss\paper-dashboard\mixins\_transparency.scss" />
+    <Content Include="assets\scss\paper-dashboard\mixins\_vendor-prefixes.scss" />
+    <Content Include="assets\scss\paper-dashboard\plugins\_plugin-animate-bootstrap-notify.scss" />
+    <Content Include="assets\scss\paper-dashboard\plugins\_plugin-perfect-scrollbar.scss" />
+    <Content Include="assets\scss\paper-dashboard\_alerts.scss" />
+    <Content Include="assets\scss\paper-dashboard\_animated-buttons.scss" />
+    <Content Include="assets\scss\paper-dashboard\_buttons.scss" />
+    <Content Include="assets\scss\paper-dashboard\_cards.scss" />
+    <Content Include="assets\scss\paper-dashboard\_checkboxes-radio.scss" />
+    <Content Include="assets\scss\paper-dashboard\_dropdown.scss" />
+    <Content Include="assets\scss\paper-dashboard\_fixed-plugin.scss" />
+    <Content Include="assets\scss\paper-dashboard\_footers.scss" />
+    <Content Include="assets\scss\paper-dashboard\_images.scss" />
+    <Content Include="assets\scss\paper-dashboard\_inputs.scss" />
+    <Content Include="assets\scss\paper-dashboard\_misc.scss" />
+    <Content Include="assets\scss\paper-dashboard\_mixins.scss" />
+    <Content Include="assets\scss\paper-dashboard\_navbar.scss" />
+    <Content Include="assets\scss\paper-dashboard\_nucleo-outline.scss" />
+    <Content Include="assets\scss\paper-dashboard\_page-header.scss" />
+    <Content Include="assets\scss\paper-dashboard\_responsive.scss" />
+    <Content Include="assets\scss\paper-dashboard\_sidebar-and-main-panel.scss" />
+    <Content Include="assets\scss\paper-dashboard\_tables.scss" />
+    <Content Include="assets\scss\paper-dashboard\_typography.scss" />
+    <Content Include="assets\scss\paper-dashboard\_variables.scss" />
+    <Content Include="CHANGELOG.md" />
+    <Content Include="LICENSE" />
+    <Content Include="package.json" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="README.md" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -221,10 +314,16 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutCliente.cshtml" />
+    <Content Include="Views\Home\Pontos.cshtml" />
+    <Content Include="Views\Home\Situacao.cshtml" />
+    <Content Include="Views\Home\Localizacao.cshtml" />
+    <Content Include="Views\Shared\_LayoutSebrae.cshtml" />
+    <Content Include="Views\HomeS\Index.cshtml" />
+    <Content Include="Views\HomeS\Empresas.cshtml" />
+    <Content Include="Views\HomeS\Consulta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -244,8 +343,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201909212059099_Update2.resx">
-      <DependentUpon>201909212059099_Update2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909221435452_CreateDatabase.resx">
+      <DependentUpon>201909221435452_CreateDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

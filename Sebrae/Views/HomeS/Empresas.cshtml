@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "Empresas";
+    Layout = "~/Views/Shared/_LayoutSebrae.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Buscador de CNPJ</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-10" style="margin-left:14px;">
+                    <div class="form-group">
+                        <label>CNPJ</label>
+                        <input type="text" class="form-control" placeholder="Insira o CNPJ" value="16902964000165">
+                    </div>
+                </div>
+
+                <div class="col-md-1">
+                    <button type="submit" class="btn btn-primary btn-round" style="margin-top:24px;">Buscar</button>
+                </div>
+            </div>
+            <!-- <div class="form-group">
+                <label>Para quem é este evento?</label>
+                <select class="custom-select2 form-control" multiple="multiple" style="width: 100%;" placeholder="">
+                <optgroup label="Administração">
+                    <option value="A1">Administrador 1</option>
+                    <option value="A2">Administrador 2</option>
+                </optgroup>
+                </select>
+            </div> -->
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                        <th>
+                            Nome da Empresa
+                        </th>
+                        <th>
+                            Cidade
+                        </th>
+                        <th>
+                            Bairro
+                        </th>
+                        <th>
+                            E-mail
+                        </th>
+                        <th class="text-right">
+                            Status
+                        </th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    1 OPCAO CALCADOS E SEMI JOIAS
+                                </td>
+                                <td>
+                                    CURITIBA
+                                </td>
+                                <td>
+                                    CAJURU
+                                </td>
+                                <td>
+                                    1opcaoatacadoevarejo@gmail.com
+                                </td>
+                                <td class="text-right">
+                                    Ativo
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

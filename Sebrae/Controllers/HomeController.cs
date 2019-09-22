@@ -41,17 +41,18 @@ namespace Sebrae.Controllers
             }
         }
 
-        public ActionResult About()
+        public ActionResult Pontos()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Situacao()
         {
-            ViewBag.Message = "Your contact page.";
+            return View();
+        }
 
+        public ActionResult Localizacao()
+        {
             return View();
         }
     }
