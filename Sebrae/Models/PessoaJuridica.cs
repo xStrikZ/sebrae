@@ -55,12 +55,16 @@ namespace Sebrae.Models
 
         public string DS_ATIVIDADE { get; set; }
 
-        public int QT_CLIENTES { get; set; }
+        [Required(AllowEmptyStrings = false)]
+        public int? QT_CLIENTES { get; set; }
 
-        public int QT_VISITAS { get; set; }
+        [Required(AllowEmptyStrings = false)]
+        public int? QT_VISITAS { get; set; }
 
-        public int QT_REALIZADAS { get; set; }
+        [Required(AllowEmptyStrings = false)]
+        public int? QT_REALIZADAS { get; set; }
 
-        public int QT_HORAS { get; set; }
+        [Required(AllowEmptyStrings = false)]
+        public int? QT_HORAS { get; set; }
     }
 }

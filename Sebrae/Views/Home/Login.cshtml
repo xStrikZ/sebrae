@@ -1,0 +1,51 @@
+﻿@model Sebrae.Models.PessoaJuridica
+@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="container">
+        <div class="row">
+            <div class="span12" style="text-align:center; margin: 200px auto;">
+                <div class="form-horizontal" style="width: 400px; margin: 0 auto;">
+                    <fieldset>
+                        <div class="control-group">
+                            <b><h1 style="color:#0094ff">SEBRAE</h1></b>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="span12" style="text-align:center; margin: -100px auto;">
+                <div class="form-horizontal" style="width: 400px; margin: 0px auto;">
+                    <fieldset>
+                        @Html.ValidationSummary("", new { @class = "text-danger" })
+                        <div class="control-group" style="width:400px; align: center">
+                            <label>Usuário</label>
+                            <div class="control-group" style="width:400px; align: center">
+                                @Html.TextBoxFor(model => model.CPF_CNPJ, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                        </div>
+                        <div class="control-group" style="width:400px">
+                            <label>Senha</label>
+                            <div class="control-group" style="width:400px; align: center">
+                                @Html.PasswordFor(model => model.CPF_CNPJ, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                        </div>
+                        <br />
+                        <div class="control-group" style="align-content: center;">
+                            <div class="configdiv">
+                                <input class="btn btn-outline-info" type="submit"
+                                       value="Login" />
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+}
