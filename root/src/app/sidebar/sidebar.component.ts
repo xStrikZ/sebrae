@@ -15,7 +15,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/maps',          title: 'Localização',       icon:'nc-map-big',    class: '' },
     { path: '/user',          title: 'Home',              icon:'nc-bank',       class: '' },
     { path: '/table',         title: 'Empresas',          icon:'nc-shop',       class: '' },
-    // { path: '/typography',    title: 'Typography',        icon:'nc-caps-small', class: '' },
+    { path: '/typography',    title: 'Consulta',          icon:'nc-zoom-split', class: '' },
     // { path: '/upgrade',       title: 'Upgrade to PRO',    icon:'nc-spaceship',  class: 'active-pro' },
 ];
 
